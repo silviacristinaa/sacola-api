@@ -5,10 +5,19 @@ spring:
    password: 1234
    driverClassName: org.postgresql.Driver
    
+ sql:
+   init:
+    mode: never
+ 
  jpa:
    show-sql: true
    defer-datasource-initialization: true 
    database-platform: org.hibernate.dialect.PostgreSQLDialect
    hibernate:
     ddl-auto: update
+    
+ mvc:
+   pathmatch:
+    matching-strategy: ANT_PATH_MATCHER
+
    
